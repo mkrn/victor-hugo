@@ -1,9 +1,28 @@
 {{ define "main" }}
 
-<h1>Hugo with Gulp, PostCSS and Webpack</h1>
+<section class="hero">
+  <h1>Money for the World</h1>
+  <h2>Decentralized low-volatility cryptocurrency with multi-layer stabilization</h2>
 
-<p>
-  Hooray 🎉 - you've built this with <a href="https://github.com/netlify/victor-hugo">Victor-Hugo</a>!
-</p>
+  <form class="subscribe">
+    <input type="email" placeholder="Your e-mail" /><button>Subscribe</button>
+  </form>
+
+  <div class="social">
+    <a href="https://t.me/stableunit">
+      <img src="/img/telegram.svg" alt="Telegram" class="icon" />
+    </a>
+    <a href="#">
+      <img src="/img/medium.svg" alt="Medium" class="icon" />
+    </a>
+    <a href="https://twitter.com/elpinguinofrio">
+      <img src="/img/twitter.svg" alt="Twitter" class="icon" />
+    </a>
+  </div>
+</section>
+
+<aside>
+  <img src="/img/hero1.png" srcset="/img/hero1_2x.png 2x" alt="Stable Unit and Volatility Penguins" />
+</aside>
 
 {{end}}

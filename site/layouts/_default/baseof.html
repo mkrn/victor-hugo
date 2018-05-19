@@ -9,11 +9,15 @@
   </head>
   <body>
 
-    {{ block "header" . }}{{ partial "header" . }}{{end}}
+    <div class="wrap">
+      {{ block "header" . }}{{ partial "header" . }}{{end}}
 
-    {{ block "main" . }}{{end}}
+      <section class="content">
+        {{ block "main" . }}{{end}}
+      </section>
 
-    {{ block "footer" . }}{{ partial "footer" . }}{{end}}
+      {{ block "footer" . }}{{ partial "footer" . }}{{end}}
+    </div>
 
     <script src="app.js"></script>
 
