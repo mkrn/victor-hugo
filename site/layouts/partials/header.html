@@ -1,17 +1,19 @@
 <header>
-  <img
-    src="/img/stableunit_logo.svg"
-    alt="Stable Unit"
-    height="38"
-  />
+  <a href="/">
+    <img
+      src="/img/stableunit_logo.svg"
+      alt="Stable Unit"
+      height="38"
+    />
+  </a>
 
   <nav>
-    <a href="">How it Works</a>
-    <a href="">Team</a>
-    <a href="">Roadmap</a>
+    {{ range .Site.Menus.main }}
+      <a href="{{.URL | absLangURL}}">{{.Name}}</a>
+    {{ end }}
   </nav>
 
   <nav id="rightNav">
-    <a href="">Whitepaper Beta</a>
+    <a href="/documents/StableUnit-protocol-draft-0.2.pdf">Whitepaper Beta</a>
   </nav>
 </header>

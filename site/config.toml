@@ -1,9 +1,51 @@
+
 baseurl = "/"
 languageCode = "en-us"
-languageLang = "en"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
 title = "Stable Unit"
 
 # RSS, categories and tags disabled for an easy start
 # See configuration options for more details:
 # https://gohugo.io/getting-started/configuration/#toml-configuration
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+
+[languages]
+
+[languages.en]
+  LanguageName = "English"
+  title = "Stable Unit: Decentralized low-volatility cryptocurrency with multi-layer stabilization"
+  weight = 1
+
+[[languages.en.menu.main]]
+  url    = "/how_it_works"
+  name   = "How it Works"
+  weight = 1
+[[languages.en.menu.main]]
+  url    = "/team"
+  name   = "Team"
+  weight = 2
+[[languages.en.menu.main]]
+  url    = "/roadmap"
+  name   = "Roadmap"
+  weight = 3
+
+
+[languages.ru]
+  LanguageName = "Русский"
+  title = "Stable Unit: Децентрализированая криптовалюта с низкой волатильностью и мульти-уровневой стабилизацией"
+  weight = 2
+
+[[languages.ru.menu.main]]
+  url    = "/how_it_works"
+  name   = "Как это работает"
+  weight = 1
+[[languages.ru.menu.main]]
+  url    = "/team"
+  name   = "Команда"
+  weight = 2
+[[languages.ru.menu.main]]
+  url    = "/roadmap"
+  name   = "Стратегия"
+  weight = 3
+

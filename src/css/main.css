@@ -38,6 +38,15 @@ body{
   font-size: 1em;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color:#F5A623;
+}
+
 div.wrap {
   max-width: 1280px;
   margin: 0 auto;
@@ -60,12 +69,7 @@ nav {
 nav a {
   text-decoration: none;
   padding: 18px 20px 0 20px;
-  color: #000;
   display: inline-block;
-}
-
-nav a:hover {
-  color:#F5A623;
 }
 
 nav#rightNav a {
@@ -147,6 +151,26 @@ form.subscribe button {
   padding: 10px;
 }
 
+footer {
+  margin-top: 130px;
+  border-top: 1px solid #efefef;
+  text-align: center;
+}
+
+ul.language_selection {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+ul.language_selection li {
+  padding: 10px;
+}
+
+ul.language_selection a {
+
+}
+
 @media (max-width: 860px) {
   aside {
      display: none;
@@ -180,3 +204,4 @@ form.subscribe button {
     width: 100%;
   }
 }
+
