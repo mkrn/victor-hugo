@@ -6,15 +6,26 @@
     <base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
     <title>{{ $.Site.Title }}</title>
     <link rel="stylesheet" href="css/main.css"/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117343453-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-117343453-1');
+    </script>
+
   </head>
   <body>
 
     <div class="wrap">
       {{ block "header" . }}{{ partial "header" . }}{{end}}
 
-      <section class="content">
-        {{ block "main" . }}{{end}}
-      </section>
+
+      {{ block "main" . }}{{end}}
+
 
       {{ block "footer" . }}{{ partial "footer" . }}{{end}}
     </div>

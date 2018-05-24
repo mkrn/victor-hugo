@@ -1,47 +1,35 @@
-// JS Goes here - ES6 supported
+window.addEventListener("load", function() {
 
-// Say hello
-// window.addEventListener("load", function () {
-//   function sendData() {
-//     var XHR = new XMLHttpRequest();
+  // store tabs variable
+  var myTabs = document.querySelectorAll("a.tab");
 
-//     // Bind the FormData object and the form element
-//     var FD = new FormData(form);
+  function myTabClicks(tabClickEvent) {
 
-//     const email = FD.get('fields[email]');
+    for (var i = 0; i < myTabs.length; i++) {
+      myTabs[i].classList.remove("active");
+    }
 
-//     // Define what happens on successful data submission
-//     XHR.addEventListener("load", function(event) {
-//       alert(event.target.responseText);
-//     });
+    var clickedTab = tabClickEvent.currentTarget;
 
-//     // curl -X POST https://api.mailerlite.com/api/v2/subscribers \
-// // -d '{"email":"demo@mailerlite.com", "name": "John", "fields": {"company": "MailerLite"}}' \
-// // -H "Content-Type: application/json" \
-// // -H "X-MailerLite-ApiKey: e57bb28020aef734b4cb7f1f0ed71e51"
+    clickedTab.classList.add("active");
 
-//     // Define what happens in case of error
-//     XHR.addEventListener("error", function(event) {
-//       alert('Oops! Something went wrong.');
-//     });
+    tabClickEvent.preventDefault();
 
-//     // Set up our request
-//     XHR.open("POST", 'https://api.mailerlite.com/api/v2/subscribers'); // form.action
+    var myContentPanes = document.querySelectorAll(".explanation");
 
-//     XHR.setRequestHeader("Content-Type", "application/json");
-//     XHR.setRequestHeader("X-MailerLite-ApiKey", "e57bb28020aef734b4cb7f1f0ed71e51");
+    for (i = 0; i < myContentPanes.length; i++) {
+      myContentPanes[i].classList.remove("active");
+    }
 
-//     // The data sent is what the user provided in the form
-//     XHR.send(JSON.stringify({email: 'test@test.com' }));
-//   }
+    var anchorReference = tabClickEvent.target;
+    var activePaneId = anchorReference.getAttribute("href");
+    var activePane = document.getElementById(activePaneId);
 
-//   // Access the form element...
-//   var form = document.getElementById("form_subscribe");
+    activePane.classList.add("active");
 
-//   // ...and take over its submit event.
-//   form.addEventListener("submit", function (event) {
-//     event.preventDefault();
+  }
 
-//     sendData();
-//   });
-// });
+  for (var i = 0; i < myTabs.length; i++) {
+    myTabs[i].addEventListener("click", myTabClicks)
+  }
+});

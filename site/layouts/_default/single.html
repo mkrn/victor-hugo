@@ -1,7 +1,9 @@
 {{ define "main" }}
-  <section>
-    {{ .Content }}
+  <section class="content">
+    <section>
+      {{ .Content }}
 
-    {{ partial "social_buttons" . }}
+      {{ partial "social_buttons" . }}
+    </section>
   </section>
 {{end}}
