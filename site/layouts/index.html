@@ -31,8 +31,6 @@
 
 <section class="block" id="explanations">
   <h1>
-    Explanation:
-
     {{ range where .Data.Pages "Section" "explanations" }}
       <a href="{{ .Permalink }}" class="tab">{{ .Title }}</a>
     {{ end }}

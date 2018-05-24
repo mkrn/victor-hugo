@@ -1,6 +1,6 @@
 ---
-title: "TL;DR;"
-weight: 1
+title: "Summary"
+weight: 2
 ---
 
 Bitcoin is an amazing new form of money that has defied the odds to gain increasing importance as money in the world today. Despite its great features that help make Bitcoin an unstoppable investment it has a problem; the *price swings prevents Bitcoin from gaining even more importance as money*. Stable coins are a new type of cryptocurrency that is entirely digital but whose price is always $1 US.
